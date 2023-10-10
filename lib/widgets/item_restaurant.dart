@@ -104,7 +104,7 @@ class ItemRestaurant extends StatelessWidget {
                               child: Icon(
                                 Icons.star,
                                 size: 14,
-                                color: Colors.yellow,
+                                color: Colors.orange,
                               ),
                             ),
                             TextSpan(
@@ -114,7 +114,7 @@ class ItemRestaurant extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .bodySmall
-                              ?.copyWith(color: Colors.yellow),
+                              ?.copyWith(color: Colors.black),
                         ),
                       ),
                     ],

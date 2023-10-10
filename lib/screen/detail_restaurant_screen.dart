@@ -142,7 +142,8 @@ class DetailRestaurantScreen extends StatelessWidget {
                                         Padding(
                                           padding: const EdgeInsets.all(4),
                                           child: Text(
-                                            '${state.result.restaurant.menus.foods[index].name}',
+                                            state.result.restaurant.menus
+                                                .foods[index].name,
                                             style: const TextStyle(
                                               fontSize: 14,
                                               fontWeight: FontWeight.bold,
@@ -164,7 +165,7 @@ class DetailRestaurantScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             const Text(
-                              'Foods',
+                              'Drinks',
                               style: TextStyle(
                                   fontSize: 16, fontWeight: FontWeight.bold),
                             ),
@@ -174,7 +175,7 @@ class DetailRestaurantScreen extends StatelessWidget {
                               child: ListView.builder(
                                 scrollDirection: Axis.horizontal,
                                 itemCount:
-                                    state.result.restaurant.menus.foods.length,
+                                    state.result.restaurant.menus.drinks.length,
                                 itemBuilder: (BuildContext context, int index) {
                                   return Card(
                                     shape: RoundedRectangleBorder(
@@ -194,7 +195,8 @@ class DetailRestaurantScreen extends StatelessWidget {
                                         Padding(
                                           padding: const EdgeInsets.all(4),
                                           child: Text(
-                                            '${state.result.restaurant.menus.drinks[index].name}',
+                                            state.result.restaurant.menus
+                                                .drinks[index].name,
                                             style: const TextStyle(
                                               fontSize: 14,
                                               fontWeight: FontWeight.bold,
@@ -236,7 +238,8 @@ class DetailRestaurantScreen extends StatelessWidget {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            '${state.result.restaurant.customerReviews[index].name}',
+                                            state.result.restaurant
+                                                .customerReviews[index].name,
                                             style: const TextStyle(
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.bold),
@@ -245,14 +248,16 @@ class DetailRestaurantScreen extends StatelessWidget {
                                             height: 8,
                                           ),
                                           Text(
-                                            '${state.result.restaurant.customerReviews[index].review}',
+                                            state.result.restaurant
+                                                .customerReviews[index].review,
                                             style: const TextStyle(
                                               fontSize: 14,
                                               fontWeight: FontWeight.w400,
                                             ),
                                           ),
                                           Text(
-                                            '${state.result.restaurant.customerReviews[index].date}',
+                                            state.result.restaurant
+                                                .customerReviews[index].date,
                                             style: const TextStyle(
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.w400),

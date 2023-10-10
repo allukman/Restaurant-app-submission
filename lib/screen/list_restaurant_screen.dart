@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:restaurant_app/data/model/restaurant.dart';
 import 'package:restaurant_app/provider/restaurant_provider.dart';
-import 'package:restaurant_app/screen/detail_restaurant_screen.dart';
 import 'package:restaurant_app/screen/search_restaurant_screen.dart';
 import 'package:restaurant_app/util/state.dart';
 import 'package:restaurant_app/widgets/item_restaurant.dart';
@@ -61,32 +59,4 @@ class ListRestaurantScreen extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget _buildArticleItem(BuildContext context, Restaurant restaurant) {
-  return ListTile(
-    contentPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-    leading: Hero(
-      tag: restaurant.pictureId,
-      child: Image.network(
-        "https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}",
-        width: 100,
-        errorBuilder: (ctx, error, _) => const Center(child: Icon(Icons.error)),
-      ),
-    ),
-    title: Text(restaurant.name),
-    subtitle: Row(
-      children: [
-        Text(restaurant.rating.toString()),
-        const SizedBox(
-          width: 8,
-        ),
-        Text(restaurant.city)
-      ],
-    ),
-    onTap: (() {
-      Navigator.pushNamed(context, DetailRestaurantScreen.routeName,
-          arguments: restaurant.id);
-    }),
-  );
 }

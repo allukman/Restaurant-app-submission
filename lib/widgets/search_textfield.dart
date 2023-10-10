@@ -17,7 +17,7 @@ class SearchTextField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _SearchTextFieldState createState() => _SearchTextFieldState();
+  State<SearchTextField> createState() => _SearchTextFieldState();
 }
 
 class _SearchTextFieldState extends State<SearchTextField> {
@@ -27,7 +27,7 @@ class _SearchTextFieldState extends State<SearchTextField> {
     return Container(
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
+        color: Colors.grey,
         borderRadius: BorderRadius.circular(12),
       ),
       child: TextField(
@@ -67,7 +67,7 @@ class _SearchTextFieldState extends State<SearchTextField> {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.0),
-        color: Theme.of(context).primaryColor,
+        color: Colors.grey,
       ),
       prefix: const Padding(
         padding: EdgeInsets.only(left: 16.0),
